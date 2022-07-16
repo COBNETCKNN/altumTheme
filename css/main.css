@@ -487,11 +487,16 @@ video {
   margin-top: auto;
   margin-bottom: auto;
 }
+.my-24{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+.my-48{
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
 .ml-24{
   margin-left: 6rem;
-}
-.ml-10{
-  margin-left: 2.5rem;
 }
 .ml-5{
   margin-left: 1.25rem;
@@ -499,11 +504,38 @@ video {
 .mt-24{
   margin-top: 6rem;
 }
+.ml-10{
+  margin-left: 2.5rem;
+}
+.mt-14{
+  margin-top: 3.5rem;
+}
+.mb-24{
+  margin-bottom: 6rem;
+}
+.-mt-2{
+  margin-top: -0.5rem;
+}
+.mb-10{
+  margin-bottom: 2.5rem;
+}
+.mb-12{
+  margin-bottom: 3rem;
+}
 .flex{
   display: flex;
 }
+.grid{
+  display: grid;
+}
 .hidden{
   display: none;
+}
+.w-9\/12{
+  width: 75%;
+}
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .justify-start{
   justify-content: flex-start;
@@ -517,6 +549,9 @@ video {
 .justify-between{
   justify-content: space-between;
 }
+.gap-4{
+  gap: 1rem;
+}
 .border{
   border-width: 1px;
 }
@@ -527,17 +562,13 @@ video {
 .bg-transparent{
   background-color: transparent;
 }
-.py-24{
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
 }
 .py-0{
   padding-top: 0px;
   padding-bottom: 0px;
-}
-.py-14{
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
 }
 .font-montserrat{
   font-family: Montserrat;
@@ -550,19 +581,60 @@ video {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .font-semibold{
   font-weight: 600;
 }
+.font-bold{
+  font-weight: 700;
+}
+.font-normal{
+  font-weight: 400;
+}
+.font-black{
+  font-weight: 900;
+}
 .uppercase{
   text-transform: uppercase;
+}
+.text-altumBrown{
+  --tw-text-opacity: 1;
+  color: rgb(50 50 50 / var(--tw-text-opacity));
 }
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-.text-altumBrown{
+.text-altumFont{
+  --tw-text-opacity: 1;
+  color: rgb(80 80 80 / var(--tw-text-opacity));
+}
+.text-altumTitle{
   --tw-text-opacity: 1;
   color: rgb(50 50 50 / var(--tw-text-opacity));
+}
+.text-altumContent{
+  --tw-text-opacity: 1;
+  color: rgb(27 27 27 / var(--tw-text-opacity));
+}
+.text-altumBlue{
+  --tw-text-opacity: 1;
+  color: rgb(34 186 201 / var(--tw-text-opacity));
+}
+.underline{
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 /** IMPORTING FONTS */
 html {
@@ -603,6 +675,15 @@ body {
 .altum_footer__arrow {
   width: 35px;
   height: 35px;
+}
+
+.singleSpeaker_image {
+  width: 250px;
+  height: 300px;
+}
+
+.singleSpeaker_anyQuestions__title {
+  font-size: 64px;
 }
 
 .hover\:bg-gray-100:hover{

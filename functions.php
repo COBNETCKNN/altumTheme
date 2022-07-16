@@ -132,6 +132,7 @@ function altumtheme_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
 }
 add_action( 'widgets_init', 'altumtheme_widgets_init' );
 
@@ -182,3 +183,56 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/** Custom Post Types */
+function altum_post_types() {
+
+	// Speakers Post Type
+    register_post_type('speaker', array(
+        'public' => true,
+        'labels' => array( 
+            'name' => 'Speakers',
+            'add_new_item' => 'Add New Speaker',
+            'edit_item' => 'Edit Speaker',
+            'all_items' => 'All Speakers',
+            'singular_name' => 'Speaker',
+        ),
+        'menu_icon' => 'dashicons-megaphone', // googled "wordpress dashicons"
+        'rewrite' => array('slug' => 'speakers'),
+        'has_archive' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+    ));
+
+}
+
+add_action('init', 'altum_post_types');
+
+/** Custom image sizes */
+
+add_image_size( 'country-of-origin', 8, 8, true );
+add_image_size( 'single-speaker', 250, 300, true );
+
+/** Custom Taxonomies */
+
+// Position Taxonomy for Speakers Custom Post Type
+function speakersPositionTaxonomy() {
+    $args = array(
+        'label'        => __( 'Position', 'textdomain' ),
+        'rewrite'      => false,
+        'hierarchical' => true
+    );
+    
+    register_taxonomy( 'position', 'speaker', $args );
+}
+add_action( 'init', 'speakersPositionTaxonomy', 0 );
+
+// Position Taxonomy for Speakers Custom Post Type
+function speakersCountryTaxonomy() {
+    $args = array(
+        'label'        => __( 'Country', 'textdomain' ),
+        'rewrite'      => false,
+        'hierarchical' => true
+    );
+    
+    register_taxonomy( 'country', 'speaker', $args );
+}
+add_action( 'init', 'speakersCountryTaxonomy', 0 );

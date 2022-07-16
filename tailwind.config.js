@@ -9,6 +9,10 @@ module.exports = {
         },
         colors: {
           altumBrown: '#323232',
+          altumFont: '#505050',
+          altumTitle: '#323232',
+          altumContent: '#1B1B1B',
+          altumBlue: '#22BAC9',
 
       },
       },
