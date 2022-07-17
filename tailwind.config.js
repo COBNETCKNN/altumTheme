@@ -13,6 +13,7 @@ module.exports = {
           altumTitle: '#323232',
           altumContent: '#1B1B1B',
           altumBlue: '#22BAC9',
+          altumCountry: '#808080',
 
       },
       },

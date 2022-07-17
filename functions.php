@@ -210,6 +210,7 @@ add_action('init', 'altum_post_types');
 
 add_image_size( 'country-of-origin', 8, 8, true );
 add_image_size( 'single-speaker', 250, 300, true );
+add_image_size( 'speakers-card', 180, 180, true );
 
 /** Custom Taxonomies */
 

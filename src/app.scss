@@ -56,3 +56,24 @@ body {
 .singleSpeaker_anyQuestions__title {
     font-size: 64px;
 }
+
+.speakers_hero__heading {
+    line-height: 43.2px;
+}
+
+.spekaers_hero__image {
+    width: 700px;
+    height: 600px;
+}
+
+.speakersCard_image {
+    img {
+        filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.1));
+        border-radius: 8px;
+    }
+}
+
+.speakersCard {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
